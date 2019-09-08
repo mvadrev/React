@@ -1,0 +1,20 @@
+import React from 'react'
+
+function MyApp() {
+    return(
+        <div>
+        <h1> My name is Mukund</h1>
+        <p> I love programming and would like to master it!</p>
+        <p> Here are some of my favorite vacation spots</p>
+        <ul>
+            <li> Manchester</li>
+            <li> Toronto</li>
+            <li> Boston</li>
+
+        </ul>
+        <p>This is a paragraph</p>
+    </div>
+    )
+}
+
+export default MyApp
