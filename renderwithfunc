@@ -1,0 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function MyApp() {
+    return(
+        <div>
+        <h1> This is my first React app 2</h1>
+        <ul>
+            <li> Number one 2</li>
+            <li> Number two 2</li>
+            <li> Number three 2</li>
+
+        </ul>
+        <p>This is a paragraph</p>
+    </div>
+    )
+}
+
+ReactDOM.render(
+    <MyApp/>,
+    document.getElementById("root")
+)
