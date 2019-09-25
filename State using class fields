@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+
+class LightningCounterDisplay extends React.Component{
+    state = {
+        strikes: 0
+    };
+    
+
+    componentDidMount() {
+        setInterval(this.timerTick, 1000);
+    }
+
+    timerTick=()=> {
+        this.setState((prevState)=>({
+            strikes: prevState.strikes + 100
+        }));
+    }
+
+
+    render() {
+        var divStyle ={
+            width:250,
+            textAlign: "center",
+            backgroundColor: "black",
+            padding: 40,
+            borderRadius: 10,
+            color: "white"
+          
+        };
+        return(
+            <div style = {divStyle}>
+                Total strikes is {this.state.strikes}
+            </div>
+        )
+    }
+}
+
+export default LightningCounterDisplay
