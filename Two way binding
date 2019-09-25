@@ -1,0 +1,48 @@
+import React from 'react'
+
+class Bind extends React.Component {
+    state = {
+        name: "This is the original state"
+       
+    }
+
+    changeName = () => {
+        this.setState({
+                name: "This is the new state"
+                       
+        })
+
+        }
+
+    revertState = () => {
+        this.setState({
+            name: "This is the original state"
+        })
+    }
+
+    changeNamefromInput = (event) => {
+        this.setState({
+            name: event.target.value 
+        })
+    }
+    render() {
+        return (
+            <div>
+                {this.state.name}
+                <br/><br/>
+                <button onClick={this.changeName}>Change State</button>
+                <br/><br/>
+                <button onClick={this.revertState}>Revert State</button>
+                <br/><br/>
+                <input type="text" onChange={this.changeNamefromInput} value={this.state.name}/>
+                <div>{this.state.name}</div>
+
+ 
+
+                
+            </div>
+        );
+    }
+}
+
+export default Bind;
